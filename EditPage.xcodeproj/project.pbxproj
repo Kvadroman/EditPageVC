@@ -9,21 +9,67 @@
 /* Begin PBXBuildFile section */
 		292A6B782C5B40900082D6FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B772C5B40900082D6FC /* AppDelegate.swift */; };
 		292A6B7A2C5B40900082D6FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B792C5B40900082D6FC /* SceneDelegate.swift */; };
-		292A6B7C2C5B40900082D6FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B7B2C5B40900082D6FC /* ViewController.swift */; };
+		292A6B7C2C5B40900082D6FC /* EditPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B7B2C5B40900082D6FC /* EditPageVC.swift */; };
 		292A6B7F2C5B40900082D6FC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 292A6B7E2C5B40900082D6FC /* Base */; };
 		292A6B812C5B40920082D6FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292A6B802C5B40920082D6FC /* Assets.xcassets */; };
 		292A6B842C5B40920082D6FC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 292A6B832C5B40920082D6FC /* Base */; };
+		292A6B912C5B41D10082D6FC /* EditPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B902C5B41D10082D6FC /* EditPageVM.swift */; };
+		292A6B932C5B41D80082D6FC /* PEditPageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B922C5B41D80082D6FC /* PEditPageVM.swift */; };
+		292A6B952C5B42070082D6FC /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B942C5B42070082D6FC /* UserCredentials.swift */; };
+		292A6B992C5BA0B50082D6FC /* EditNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6B972C5BA0B50082D6FC /* EditNavigationView.swift */; };
+		292A6B9C2C5BA5CF0082D6FC /* EditNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292A6B9B2C5BA5CF0082D6FC /* EditNavigationView.xib */; };
+		292A6BA32C5BBBBA0082D6FC /* EditAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292A6BA22C5BBBBA0082D6FC /* EditAvatarView.xib */; };
+		292A6BA52C5BBBC40082D6FC /* EditAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BA42C5BBBC40082D6FC /* EditAvatarView.swift */; };
+		292A6BA72C5BC4A20082D6FC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BA62C5BC4A20082D6FC /* ImagePicker.swift */; };
+		292A6BAA2C5BCD3E0082D6FC /* PValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BA92C5BCD3E0082D6FC /* PValidator.swift */; };
+		292A6BAC2C5BCF980082D6FC /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BAB2C5BCF980082D6FC /* KeychainManager.swift */; };
+		292A6BB02C5BD0790082D6FC /* EditFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BAF2C5BD0790082D6FC /* EditFileManager.swift */; };
+		292A6BB32C5C2B520082D6FC /* EditTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292A6BB22C5C2B520082D6FC /* EditTextFieldView.xib */; };
+		292A6BB52C5C2B590082D6FC /* EditTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BB42C5C2B590082D6FC /* EditTextFieldView.swift */; };
+		292A6BB82C5C2D0E0082D6FC /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BB72C5C2D0E0082D6FC /* PaddedTextField.swift */; };
+		292A6BBA2C5C559B0082D6FC /* AgeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BB92C5C559B0082D6FC /* AgeValidator.swift */; };
+		292A6BBE2C5C55F70082D6FC /* PhotoSizeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BBD2C5C55F70082D6FC /* PhotoSizeValidator.swift */; };
+		292A6BC02C5C62530082D6FC /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BBF2C5C62530082D6FC /* AlertManager.swift */; };
+		292A6BC22C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC12C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift */; };
+		292A6BC42C5C6EB00082D6FC /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC32C5C6EB00082D6FC /* KeyboardHandler.swift */; };
+		292A6BC62C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC52C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift */; };
+		292A6BCA2C5C743E0082D6FC /* DatePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC92C5C743E0082D6FC /* DatePickerManager.swift */; };
+		292A6BCC2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BCB2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift */; };
+		292A6BCE2C5C921B0082D6FC /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BCD2C5C921B0082D6FC /* PhoneValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		292A6B742C5B40900082D6FC /* EditPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EditPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		292A6B772C5B40900082D6FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		292A6B792C5B40900082D6FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		292A6B7B2C5B40900082D6FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		292A6B7B2C5B40900082D6FC /* EditPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageVC.swift; sourceTree = "<group>"; };
 		292A6B7E2C5B40900082D6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		292A6B802C5B40920082D6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		292A6B832C5B40920082D6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		292A6B852C5B40920082D6FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		292A6B902C5B41D10082D6FC /* EditPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageVM.swift; sourceTree = "<group>"; };
+		292A6B922C5B41D80082D6FC /* PEditPageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEditPageVM.swift; sourceTree = "<group>"; };
+		292A6B942C5B42070082D6FC /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
+		292A6B972C5BA0B50082D6FC /* EditNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNavigationView.swift; sourceTree = "<group>"; };
+		292A6B9B2C5BA5CF0082D6FC /* EditNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditNavigationView.xib; sourceTree = "<group>"; };
+		292A6BA22C5BBBBA0082D6FC /* EditAvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAvatarView.xib; sourceTree = "<group>"; };
+		292A6BA42C5BBBC40082D6FC /* EditAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAvatarView.swift; sourceTree = "<group>"; };
+		292A6BA62C5BC4A20082D6FC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		292A6BA92C5BCD3E0082D6FC /* PValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PValidator.swift; sourceTree = "<group>"; };
+		292A6BAB2C5BCF980082D6FC /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		292A6BAF2C5BD0790082D6FC /* EditFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFileManager.swift; sourceTree = "<group>"; };
+		292A6BB22C5C2B520082D6FC /* EditTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTextFieldView.xib; sourceTree = "<group>"; };
+		292A6BB42C5C2B590082D6FC /* EditTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextFieldView.swift; sourceTree = "<group>"; };
+		292A6BB72C5C2D0E0082D6FC /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		292A6BB92C5C559B0082D6FC /* AgeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeValidator.swift; sourceTree = "<group>"; };
+		292A6BBD2C5C55F70082D6FC /* PhotoSizeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSizeValidator.swift; sourceTree = "<group>"; };
+		292A6BBF2C5C62530082D6FC /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		292A6BC12C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextFieldDelegate.swift; sourceTree = "<group>"; };
+		292A6BC32C5C6EB00082D6FC /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		292A6BC52C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardDismissable.swift"; sourceTree = "<group>"; };
+		292A6BC92C5C743E0082D6FC /* DatePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerManager.swift; sourceTree = "<group>"; };
+		292A6BCB2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextFieldDelegate.swift; sourceTree = "<group>"; };
+		292A6BCD2C5C921B0082D6FC /* PhoneValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +104,132 @@
 			children = (
 				292A6B772C5B40900082D6FC /* AppDelegate.swift */,
 				292A6B792C5B40900082D6FC /* SceneDelegate.swift */,
-				292A6B7B2C5B40900082D6FC /* ViewController.swift */,
+				292A6B8B2C5B417D0082D6FC /* EditPageFlow */,
+				292A6B9D2C5BB16F0082D6FC /* Extensions */,
 				292A6B7D2C5B40900082D6FC /* Main.storyboard */,
 				292A6B802C5B40920082D6FC /* Assets.xcassets */,
 				292A6B822C5B40920082D6FC /* LaunchScreen.storyboard */,
 				292A6B852C5B40920082D6FC /* Info.plist */,
 			);
 			path = EditPage;
+			sourceTree = "<group>";
+		};
+		292A6B8B2C5B417D0082D6FC /* EditPageFlow */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BA82C5BCD2A0082D6FC /* Validators */,
+				292A6B8F2C5B41920082D6FC /* Helpers */,
+				292A6B962C5BA0970082D6FC /* Subviews */,
+				292A6B8E2C5B418E0082D6FC /* Models */,
+				292A6B8D2C5B418B0082D6FC /* ViewModel */,
+				292A6B8C2C5B41850082D6FC /* ViewController */,
+			);
+			path = EditPageFlow;
+			sourceTree = "<group>";
+		};
+		292A6B8C2C5B41850082D6FC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				292A6B7B2C5B40900082D6FC /* EditPageVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		292A6B8D2C5B418B0082D6FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				292A6B922C5B41D80082D6FC /* PEditPageVM.swift */,
+				292A6B902C5B41D10082D6FC /* EditPageVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		292A6B8E2C5B418E0082D6FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				292A6B942C5B42070082D6FC /* UserCredentials.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		292A6B8F2C5B41920082D6FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BA62C5BC4A20082D6FC /* ImagePicker.swift */,
+				292A6BAB2C5BCF980082D6FC /* KeychainManager.swift */,
+				292A6BAF2C5BD0790082D6FC /* EditFileManager.swift */,
+				292A6BC32C5C6EB00082D6FC /* KeyboardHandler.swift */,
+				292A6BBF2C5C62530082D6FC /* AlertManager.swift */,
+				292A6BC92C5C743E0082D6FC /* DatePickerManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		292A6B962C5BA0970082D6FC /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BB62C5C2D020082D6FC /* PaddedTextField */,
+				292A6BB12C5C2B3C0082D6FC /* EditTextFieldView */,
+				292A6BA02C5BBB840082D6FC /* EditNavigationView */,
+				292A6BA12C5BBB8D0082D6FC /* EditAvatarView */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		292A6B9D2C5BB16F0082D6FC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BC52C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		292A6BA02C5BBB840082D6FC /* EditNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				292A6B972C5BA0B50082D6FC /* EditNavigationView.swift */,
+				292A6B9B2C5BA5CF0082D6FC /* EditNavigationView.xib */,
+			);
+			path = EditNavigationView;
+			sourceTree = "<group>";
+		};
+		292A6BA12C5BBB8D0082D6FC /* EditAvatarView */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BA22C5BBBBA0082D6FC /* EditAvatarView.xib */,
+				292A6BA42C5BBBC40082D6FC /* EditAvatarView.swift */,
+			);
+			path = EditAvatarView;
+			sourceTree = "<group>";
+		};
+		292A6BA82C5BCD2A0082D6FC /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BA92C5BCD3E0082D6FC /* PValidator.swift */,
+				292A6BB92C5C559B0082D6FC /* AgeValidator.swift */,
+				292A6BCD2C5C921B0082D6FC /* PhoneValidator.swift */,
+				292A6BBD2C5C55F70082D6FC /* PhotoSizeValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		292A6BB12C5C2B3C0082D6FC /* EditTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BB22C5C2B520082D6FC /* EditTextFieldView.xib */,
+				292A6BB42C5C2B590082D6FC /* EditTextFieldView.swift */,
+			);
+			path = EditTextFieldView;
+			sourceTree = "<group>";
+		};
+		292A6BB62C5C2D020082D6FC /* PaddedTextField */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BB72C5C2D0E0082D6FC /* PaddedTextField.swift */,
+				292A6BC12C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift */,
+				292A6BCB2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift */,
+			);
+			path = PaddedTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +290,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292A6B9C2C5BA5CF0082D6FC /* EditNavigationView.xib in Resources */,
 				292A6B812C5B40920082D6FC /* Assets.xcassets in Resources */,
+				292A6BA32C5BBBBA0082D6FC /* EditAvatarView.xib in Resources */,
 				292A6B842C5B40920082D6FC /* Base in Resources */,
+				292A6BB32C5C2B520082D6FC /* EditTextFieldView.xib in Resources */,
 				292A6B7F2C5B40900082D6FC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +306,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				292A6B7C2C5B40900082D6FC /* ViewController.swift in Sources */,
+				292A6B932C5B41D80082D6FC /* PEditPageVM.swift in Sources */,
+				292A6BB52C5C2B590082D6FC /* EditTextFieldView.swift in Sources */,
+				292A6B992C5BA0B50082D6FC /* EditNavigationView.swift in Sources */,
+				292A6B7C2C5B40900082D6FC /* EditPageVC.swift in Sources */,
+				292A6BA72C5BC4A20082D6FC /* ImagePicker.swift in Sources */,
+				292A6B912C5B41D10082D6FC /* EditPageVM.swift in Sources */,
+				292A6BCE2C5C921B0082D6FC /* PhoneValidator.swift in Sources */,
+				292A6BCC2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift in Sources */,
 				292A6B782C5B40900082D6FC /* AppDelegate.swift in Sources */,
+				292A6BAC2C5BCF980082D6FC /* KeychainManager.swift in Sources */,
+				292A6BC02C5C62530082D6FC /* AlertManager.swift in Sources */,
+				292A6BC22C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift in Sources */,
+				292A6BCA2C5C743E0082D6FC /* DatePickerManager.swift in Sources */,
+				292A6BC62C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift in Sources */,
+				292A6BBE2C5C55F70082D6FC /* PhotoSizeValidator.swift in Sources */,
+				292A6BB02C5BD0790082D6FC /* EditFileManager.swift in Sources */,
 				292A6B7A2C5B40900082D6FC /* SceneDelegate.swift in Sources */,
+				292A6BAA2C5BCD3E0082D6FC /* PValidator.swift in Sources */,
+				292A6B952C5B42070082D6FC /* UserCredentials.swift in Sources */,
+				292A6BC42C5C6EB00082D6FC /* KeyboardHandler.swift in Sources */,
+				292A6BA52C5BBBC40082D6FC /* EditAvatarView.swift in Sources */,
+				292A6BBA2C5C559B0082D6FC /* AgeValidator.swift in Sources */,
+				292A6BB82C5C2D0E0082D6FC /* PaddedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +488,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +496,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AntonIvchenko.EditPage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -328,6 +521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +529,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AntonIvchenko.EditPage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

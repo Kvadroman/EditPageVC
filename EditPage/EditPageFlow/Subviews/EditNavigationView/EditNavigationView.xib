@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditNavigationView" customModule="EditPage" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="HbN-MT-POL" id="fsH-Xa-JLb"/>
+                <outlet property="contentView" destination="nKc-33-8nn" id="bMR-UR-i0S"/>
+                <outlet property="lTitle" destination="QKC-oN-MTY" id="2WZ-EE-ZqM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nKc-33-8nn">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWF-IE-mRV">
+                    <rect key="frame" x="12" y="34.666666666666664" width="44" height="43.999999999999993"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="VhW-JR-nL6"/>
+                        <constraint firstAttribute="width" secondItem="bWF-IE-mRV" secondAttribute="height" multiplier="1:1" id="l2f-hf-iIG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbN-MT-POL">
+                    <rect key="frame" x="14.666666666666664" y="39.333333333333329" width="39" height="34.333333333333329"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="←">
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKC-oN-MTY">
+                    <rect key="frame" x="167" y="39.666666666666671" width="129" height="33.666666666666671"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QKC-oN-MTY" firstAttribute="centerX" secondItem="nKc-33-8nn" secondAttribute="centerX" id="FNy-gj-wr7"/>
+                <constraint firstItem="bWF-IE-mRV" firstAttribute="leading" secondItem="nKc-33-8nn" secondAttribute="leading" constant="12" id="Ilg-5g-A8c"/>
+                <constraint firstItem="bWF-IE-mRV" firstAttribute="centerY" secondItem="nKc-33-8nn" secondAttribute="centerY" id="TMl-fO-is4"/>
+                <constraint firstItem="QKC-oN-MTY" firstAttribute="centerY" secondItem="nKc-33-8nn" secondAttribute="centerY" id="WuP-DG-MEG"/>
+                <constraint firstItem="HbN-MT-POL" firstAttribute="centerX" secondItem="bWF-IE-mRV" secondAttribute="centerX" id="dWn-7o-68d"/>
+                <constraint firstItem="HbN-MT-POL" firstAttribute="centerY" secondItem="bWF-IE-mRV" secondAttribute="centerY" id="t0Y-hx-VSH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="219.08396946564883" y="-316.54929577464793"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
