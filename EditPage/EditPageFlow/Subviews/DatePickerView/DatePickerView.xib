@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="EditPage" customModuleProvider="target">
+            <connections>
+                <outlet property="bDone" destination="DIQ-VF-Bvn" id="ald-CK-fru"/>
+                <outlet property="contentView" destination="LEZ-fe-cFQ" id="2lo-OP-Z8l"/>
+                <outlet property="datePicker" destination="eZf-OX-LdA" id="046-xk-5KD"/>
+                <outlet property="toolBar" destination="7E5-vD-bJc" id="LVp-OM-CeH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="LEZ-fe-cFQ">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="287"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wbl-cw-9cX">
+                    <rect key="frame" x="0.0" y="0.0" width="475" height="253"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7E5-vD-bJc">
+                            <rect key="frame" x="0.0" y="0.0" width="475" height="91"/>
+                            <items>
+                                <barButtonItem title="Done" style="plain" id="DIQ-VF-Bvn"/>
+                            </items>
+                        </toolbar>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="eZf-OX-LdA">
+                            <rect key="frame" x="0.0" y="91" width="475" height="162"/>
+                        </datePicker>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="aZc-Tu-EV7"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Wbl-cw-9cX" firstAttribute="top" secondItem="LEZ-fe-cFQ" secondAttribute="top" id="Brm-v6-IWN"/>
+                <constraint firstItem="Wbl-cw-9cX" firstAttribute="leading" secondItem="aZc-Tu-EV7" secondAttribute="leading" id="KUi-bH-QHq"/>
+                <constraint firstItem="Wbl-cw-9cX" firstAttribute="trailing" secondItem="aZc-Tu-EV7" secondAttribute="trailing" id="RFY-bI-Mgq"/>
+                <constraint firstItem="aZc-Tu-EV7" firstAttribute="bottom" secondItem="Wbl-cw-9cX" secondAttribute="bottom" id="t1c-4b-5jM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="535.1145038167939" y="-172.18309859154931"/>
+        </view>
+    </objects>
+</document>

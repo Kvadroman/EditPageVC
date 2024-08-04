@@ -8,19 +8,13 @@
 import Foundation
 
 protocol PValidator {
-    associatedtype Value
-    func validate(_ value: Value, error: ((String) -> Void)?) -> Bool
+    var error: ((String) -> Void)? { get set }
+    func validate(_ value: Any) -> Bool
 }
 
-struct AnyValidator<Value>: PValidator {
-    // MARK: - Properties
-    private let _validate: (Value, ((String) -> Void)?) -> Bool
-    // MARK: - Init
-    init<V: PValidator>(_ validator: V) where V.Value == Value {
-        _validate = validator.validate
-    }
-    // MARK: - Interface
-    func validate(_ value: Value, error: ((String) -> Void)? = nil) -> Bool {
-        _validate(value, error)
+extension PValidator {
+    var error: ((String) -> Void)? {
+        get { { _ in } }
+        set {}
     }
 }

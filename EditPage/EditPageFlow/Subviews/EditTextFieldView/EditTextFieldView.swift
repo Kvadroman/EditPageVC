@@ -38,7 +38,7 @@ final class EditTextFieldView: UIView {
     }
     // MARK: - Private methods
     private func commonInit() {
-        Bundle.main.loadNibNamed("EditTextFieldView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(String.BundleName.editTextFieldView, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

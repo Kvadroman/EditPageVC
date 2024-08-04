@@ -26,9 +26,10 @@ final class AlertManager {
 }
 
 struct AlertConfig {
+    private typealias Strings = String.AlertManager
     // MARK: - Properties
     let title: String
     let errorMessage: String
-    static let saveFailure: AlertConfig = .init(title: "Failure", errorMessage: "Credentials aren't saved!")
-    static let saveSuccess: AlertConfig = .init(title: "Success", errorMessage: "Successfully Saved!")
+    static let saveFailure: AlertConfig = .init(title: Strings.saveFailureTitle, errorMessage: Strings.saveFailureError)
+    static let saveSuccess: AlertConfig = .init(title: Strings.saveSuccessTitle, errorMessage:  Strings.saveSuccessError)
 }

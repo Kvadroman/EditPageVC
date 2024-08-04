@@ -13,6 +13,7 @@ protocol PEditFileManager {
 }
 
 final class EditFileManager: PEditFileManager {
+    private typealias Strings = String.FileManager
     // MARK: - Properties
     private let fileManager = FileManager.default
     // MARK: - Interface
@@ -24,7 +25,7 @@ final class EditFileManager: PEditFileManager {
             try data.write(to: fileURL)
             return fileURL
         } catch {
-            print("Error saving image: \(error)")
+            print(Strings.savingError.localizedFormat(error.localizedDescription))
             return nil
         }
     }
@@ -36,7 +37,9 @@ final class EditFileManager: PEditFileManager {
             let data = try Data(contentsOf: fileURL)
             return UIImage(data: data)
         } catch {
-            print("Error loading image from url: \(fileURL.absoluteString), error: \(error)")
+            print(Strings
+                .loadingError
+                .localizedFormat(fileURL.absoluteString, error.localizedDescription))
             return nil
         }
     }

@@ -39,32 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D9CD946B-3A9F-443B-AFB9-23202F2B5696"
+            uuid = "5E51C651-57EB-49AB-814B-6E05BADF7E41"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EditPage/EditPageFlow/Validators/PValidator.swift"
+            filePath = "EditPage/EditPageFlow/Validators/AgeValidator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "validate(_:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4224B149-0DFB-49F0-B41B-A60E96D30F07"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EditPage/EditPageFlow/Validators/PhotoSizeValidator.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "validate(_:error:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "validate(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

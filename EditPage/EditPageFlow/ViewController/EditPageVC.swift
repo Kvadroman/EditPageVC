@@ -18,7 +18,7 @@ final class EditPageVC: UIViewController {
     @IBOutlet private var vGenderTextField: EditTextFieldView!
     @IBOutlet private var vBirthdayTextField: EditTextFieldView! {
         didSet {
-            datePickerManager.configure(textField: vBirthdayTextField.paddedTextField)
+            datePickerView.configure(textField: vBirthdayTextField.paddedTextField)
         }
     }
     @IBOutlet private var vPhoneTextField: EditTextFieldView! {
@@ -52,7 +52,7 @@ final class EditPageVC: UIViewController {
     private var keyboardHandler: KeyboardHandler?
     private let phoneTextFieldDelegate = PhoneTextFieldDelegate()
     private let userNameTextFieldDelegate = UserNameTextFieldDelegate()
-    private let datePickerManager = DatePickerManager()
+    private let datePickerView = DatePickerView()
     // MARK: - Overriden methods
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -33,9 +33,13 @@
 		292A6BC22C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC12C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift */; };
 		292A6BC42C5C6EB00082D6FC /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC32C5C6EB00082D6FC /* KeyboardHandler.swift */; };
 		292A6BC62C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC52C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift */; };
-		292A6BCA2C5C743E0082D6FC /* DatePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BC92C5C743E0082D6FC /* DatePickerManager.swift */; };
 		292A6BCC2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BCB2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift */; };
 		292A6BCE2C5C921B0082D6FC /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BCD2C5C921B0082D6FC /* PhoneValidator.swift */; };
+		292A6BD22C6027590082D6FC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 292A6BD12C6027590082D6FC /* Localizable.xcstrings */; };
+		292A6BD42C6027870082D6FC /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BD32C6027870082D6FC /* Localizable.swift */; };
+		292A6BD62C6029AA0082D6FC /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BD52C6029AA0082D6FC /* String+localized.swift */; };
+		292A6BD82C6036230082D6FC /* DatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292A6BD72C6036230082D6FC /* DatePickerView.xib */; };
+		292A6BDA2C6036300082D6FC /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292A6BD92C6036300082D6FC /* DatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,9 +71,13 @@
 		292A6BC12C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextFieldDelegate.swift; sourceTree = "<group>"; };
 		292A6BC32C5C6EB00082D6FC /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		292A6BC52C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardDismissable.swift"; sourceTree = "<group>"; };
-		292A6BC92C5C743E0082D6FC /* DatePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerManager.swift; sourceTree = "<group>"; };
 		292A6BCB2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		292A6BCD2C5C921B0082D6FC /* PhoneValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		292A6BD12C6027590082D6FC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		292A6BD32C6027870082D6FC /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		292A6BD52C6029AA0082D6FC /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
+		292A6BD72C6036230082D6FC /* DatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerView.xib; sourceTree = "<group>"; };
+		292A6BD92C6036300082D6FC /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +114,8 @@
 				292A6B792C5B40900082D6FC /* SceneDelegate.swift */,
 				292A6B8B2C5B417D0082D6FC /* EditPageFlow */,
 				292A6B9D2C5BB16F0082D6FC /* Extensions */,
-				292A6B7D2C5B40900082D6FC /* Main.storyboard */,
-				292A6B802C5B40920082D6FC /* Assets.xcassets */,
-				292A6B822C5B40920082D6FC /* LaunchScreen.storyboard */,
+				292A6BD02C6027310082D6FC /* Localizable */,
+				292A6BCF2C60271D0082D6FC /* Misc */,
 				292A6B852C5B40920082D6FC /* Info.plist */,
 			);
 			path = EditPage;
@@ -160,7 +167,6 @@
 				292A6BAF2C5BD0790082D6FC /* EditFileManager.swift */,
 				292A6BC32C5C6EB00082D6FC /* KeyboardHandler.swift */,
 				292A6BBF2C5C62530082D6FC /* AlertManager.swift */,
-				292A6BC92C5C743E0082D6FC /* DatePickerManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 		292A6B962C5BA0970082D6FC /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				292A6BDB2C603B2D0082D6FC /* DatePickerView */,
 				292A6BB62C5C2D020082D6FC /* PaddedTextField */,
 				292A6BB12C5C2B3C0082D6FC /* EditTextFieldView */,
 				292A6BA02C5BBB840082D6FC /* EditNavigationView */,
@@ -180,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				292A6BC52C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift */,
+				292A6BD52C6029AA0082D6FC /* String+localized.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +238,34 @@
 				292A6BCB2C5C84DC0082D6FC /* UserNameTextFieldDelegate.swift */,
 			);
 			path = PaddedTextField;
+			sourceTree = "<group>";
+		};
+		292A6BCF2C60271D0082D6FC /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				292A6B7D2C5B40900082D6FC /* Main.storyboard */,
+				292A6B802C5B40920082D6FC /* Assets.xcassets */,
+				292A6B822C5B40920082D6FC /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		292A6BD02C6027310082D6FC /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BD12C6027590082D6FC /* Localizable.xcstrings */,
+				292A6BD32C6027870082D6FC /* Localizable.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		292A6BDB2C603B2D0082D6FC /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				292A6BD72C6036230082D6FC /* DatePickerView.xib */,
+				292A6BD92C6036300082D6FC /* DatePickerView.swift */,
+			);
+			path = DatePickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +328,11 @@
 			files = (
 				292A6B9C2C5BA5CF0082D6FC /* EditNavigationView.xib in Resources */,
 				292A6B812C5B40920082D6FC /* Assets.xcassets in Resources */,
+				292A6BD82C6036230082D6FC /* DatePickerView.xib in Resources */,
 				292A6BA32C5BBBBA0082D6FC /* EditAvatarView.xib in Resources */,
 				292A6B842C5B40920082D6FC /* Base in Resources */,
 				292A6BB32C5C2B520082D6FC /* EditTextFieldView.xib in Resources */,
+				292A6BD22C6027590082D6FC /* Localizable.xcstrings in Resources */,
 				292A6B7F2C5B40900082D6FC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,16 +356,18 @@
 				292A6BAC2C5BCF980082D6FC /* KeychainManager.swift in Sources */,
 				292A6BC02C5C62530082D6FC /* AlertManager.swift in Sources */,
 				292A6BC22C5C6D4F0082D6FC /* PhoneTextFieldDelegate.swift in Sources */,
-				292A6BCA2C5C743E0082D6FC /* DatePickerManager.swift in Sources */,
 				292A6BC62C5C72220082D6FC /* UIViewController+KeyboardDismissable.swift in Sources */,
 				292A6BBE2C5C55F70082D6FC /* PhotoSizeValidator.swift in Sources */,
 				292A6BB02C5BD0790082D6FC /* EditFileManager.swift in Sources */,
 				292A6B7A2C5B40900082D6FC /* SceneDelegate.swift in Sources */,
+				292A6BD62C6029AA0082D6FC /* String+localized.swift in Sources */,
 				292A6BAA2C5BCD3E0082D6FC /* PValidator.swift in Sources */,
 				292A6B952C5B42070082D6FC /* UserCredentials.swift in Sources */,
 				292A6BC42C5C6EB00082D6FC /* KeyboardHandler.swift in Sources */,
 				292A6BA52C5BBBC40082D6FC /* EditAvatarView.swift in Sources */,
+				292A6BDA2C6036300082D6FC /* DatePickerView.swift in Sources */,
 				292A6BBA2C5C559B0082D6FC /* AgeValidator.swift in Sources */,
+				292A6BD42C6027870082D6FC /* Localizable.swift in Sources */,
 				292A6BB82C5C2D0E0082D6FC /* PaddedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

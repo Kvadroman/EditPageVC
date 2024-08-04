@@ -8,6 +8,7 @@
 import UIKit
 
 final class EditPageVM: PEditPageVM {
+    private typealias Strings = String.TextFieldHeader
     // MARK: - Interface
     var input: Input = .init()
     var output: Output = .init()
@@ -22,20 +23,20 @@ final class EditPageVM: PEditPageVM {
             userCredentials.username,
         ]
     }
-    private var photoSizeValidator: AnyValidator<UIImage> = AnyValidator(PhotoSizeValidator())
-    private let ageValidator: AnyValidator<String> = AnyValidator(AgeValidator())
-    private let phoneValidator: AnyValidator<String> = AnyValidator(PhoneValidator())
+    private var photoSizeValidator: PValidator = PhotoSizeValidator()
+    private let ageValidator: PValidator = AgeValidator()
+    private let phoneValidator: PValidator = PhoneValidator()
     private var userCredentials: UserCredentials = .init()
     private var imagePicker: PImagePicker = ImagePicker()
     private let keychainManager: PKeychainManager = KeychainManager()
     private let imageFileManager: PEditFileManager = EditFileManager()
     private let textFieldHeaders: [String] = [
-        "Full name",
-        "Gender",
-        "Birthday",
-        "Phone number",
-        "Email",
-        "User name",
+        Strings.fullName,
+        Strings.gender,
+        Strings.birthday,
+        Strings.phoneNumber,
+        Strings.email,
+        Strings.userName,
     ]
     // MARK: - Init
     init() {
@@ -54,6 +55,9 @@ final class EditPageVM: PEditPageVM {
         }
         input.openImagePicker = { [weak self] viewController in
             self?.openImagePicker(on: viewController)
+        }
+        photoSizeValidator.error = { [weak self] errorMessage in
+            self?.output.showAlert?(AlertConfig(title: String.AlertManager.validationError, errorMessage: errorMessage))
         }
     }
     private func validate(_ models: [String]) -> Bool {
@@ -90,18 +94,16 @@ final class EditPageVM: PEditPageVM {
         imagePicker.pickImage(on: viewController) { [weak self] image in
             guard let self,
                   let image,
-                  self.photoSizeValidator.validate(image, error: { errorMessage in
-                      self.output.showAlert?(AlertConfig(title: "Validation Error", errorMessage: errorMessage))
-                  })
+                  self.photoSizeValidator.validate(image)
             else { return }
-            let photoURL = imageFileManager.saveImage(image, withName: "avatar")
+            let photoURL = imageFileManager.saveImage(image, withName: String.FileManager.avatar)
             userCredentials.photoURL = photoURL
             output.onImageSelected?(image)
         }
     }
     private func saveCredentials() {
         guard let data = try? JSONEncoder().encode(userCredentials),
-        keychainManager.saveData(data, forKey: "userCredentials")
+              keychainManager.saveData(data, forKey: String.Keychain.userCredentials)
         else {
             output.showAlert?(AlertConfig.saveFailure)
             return
@@ -110,7 +112,7 @@ final class EditPageVM: PEditPageVM {
         output.onSetupTextFields?(textFieldHeaders, userCredentialsTextFieldValues)
     }
     private func loadCredentials() {
-        guard let data = keychainManager.loadData(forKey: "userCredentials"),
+        guard let data = keychainManager.loadData(forKey: String.Keychain.userCredentials),
               let decoded = try? JSONDecoder().decode(UserCredentials.self, from: data)
         else { return }
         userCredentials = decoded

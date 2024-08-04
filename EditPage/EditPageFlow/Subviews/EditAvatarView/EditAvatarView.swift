@@ -34,7 +34,7 @@ final class EditAvatarView: UIView {
     }
     // MARK: - Private methods
     private func commonInit() {
-        Bundle.main.loadNibNamed("EditAvatarView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(String.BundleName.editAvatarView, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

@@ -37,11 +37,7 @@ final class KeychainManager: PKeychainManager {
         var dataTypeRef: AnyObject?
         let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
         
-        if status == errSecSuccess {
-            return dataTypeRef as? Data
-        } else {
-            return nil
-        }
+        return status == errSecSuccess ? (dataTypeRef as? Data) : nil
     }
     func deleteData(forKey key: String) -> Bool {
         let query = [

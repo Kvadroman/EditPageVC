@@ -8,9 +8,9 @@
 import Foundation
 
 struct AgeValidator: PValidator {
-    typealias Value = String
     // MARK: - Interface
-    func validate(_ value: String, error: ((String) -> Void)?) -> Bool {
+    func validate(_ value: Any) -> Bool {
+        guard let value = value as? String else { return false }
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy"
         guard let date = formatter.date(from: value) else { return false }

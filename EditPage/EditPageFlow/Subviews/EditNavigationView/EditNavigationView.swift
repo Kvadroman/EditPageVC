@@ -31,7 +31,7 @@ final class EditNavigationView: UIView {
         commonInit()
     }
     private func commonInit() {
-        Bundle.main.loadNibNamed("EditNavigationView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(String.BundleName.editNavigationView, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
